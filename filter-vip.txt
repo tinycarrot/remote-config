@@ -3,6 +3,7 @@ HOST,api.hskonline.com,Fake iAP Policy
 
 #FIMO
 HOST,server.yoyiapp.com,Fake iAP Policy
+HOST,server.zbisq.com,Fake iAP Policy
 
 #FPT Telecom
 HOST,sapi.fpt.vn,Fake iAP Policy
