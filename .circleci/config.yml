@@ -17,7 +17,7 @@ jobs:
       - run:
           name: SSH into VPS Server and deploy
           command: |
-            ssh -tt root@104.197.48.187 "cd /var/www/htmp/remote-config/ && git pull origin quantumult-x"
+            ssh -tt root@104.197.48.187 "cd /var/www/html/remote-config/ && git pull origin quantumult-x"
 
 workflows:
   version: 2
