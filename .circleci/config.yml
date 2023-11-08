@@ -1,0 +1,26 @@
+version: 2.1
+
+jobs:
+  deploy:
+    docker:
+      - image: cimg/python:3.9
+
+    steps:
+      - checkout
+
+      - add_ssh_keys:
+          fingerprints:
+            - "6f:3f:ae:75:53:4e:b1:6c:30:72:d3:44:dd:1d:f8:4a"  # Thay thế bằng dấu vân tay của khóa SSH
+      - run:
+          name: fix host authenticity for production server
+          command: ssh-keyscan 104.197.48.187 >> ~/.ssh/known_hosts
+      - run:
+          name: SSH into VPS Server and deploy
+          command: |
+            ssh -tt root@104.197.48.187 "cd /var/www/htmp/remote-config/ && git pull origin quantumult-x"
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - deploy
