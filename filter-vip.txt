@@ -1,3 +1,6 @@
+#TrueCaller 
+HOST,premium-noneu.truecaller.com,Fake iAP Policy
+
 #Super Test
 HOST,api.hskonline.com,Fake iAP Policy
 
