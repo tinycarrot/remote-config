@@ -1,5 +1,5 @@
 const CONFIG = {
-  eproxy: "HTTP 35.208.117.18:9999",
+  eproxy: "SOCKS 141.147.153.232:443",
   efinal: "DIRECT",
   enable: true,
   mitmall: false,
